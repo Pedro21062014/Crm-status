@@ -36,7 +36,7 @@
     "timeMonth": 40,
     "timeYear": 40,
     "dailyMinutesDown": {
-      "2026-07-28": 796
+      "2026-07-28": 797
     }
   },
   {
@@ -45,16 +45,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/novacrm.com.br.ico",
     "slug": "api-health",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "59.77%",
+    "uptimeDay": "59.77%",
+    "uptimeWeek": "59.77%",
+    "uptimeMonth": "59.77%",
+    "uptimeYear": "59.77%",
     "time": 22,
     "timeDay": 22,
     "timeWeek": 22,
     "timeMonth": 22,
     "timeYear": 22,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-07-28": 0
+    }
   }
 ]
