@@ -45,16 +45,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/novacrm.com.br.ico",
     "slug": "logo",
     "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "uptime": "64.85%",
+    "uptimeDay": "64.85%",
+    "uptimeWeek": "64.85%",
+    "uptimeMonth": "64.85%",
+    "uptimeYear": "64.85%",
     "time": 47,
     "timeDay": 47,
     "timeWeek": 47,
     "timeMonth": 47,
     "timeYear": 47,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-07-28": 0
+    }
   }
 ]
