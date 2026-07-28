@@ -1,31 +1,216 @@
-# Adicione esta linha no seu .upptimerc.yml:
-staticSiteGenerator: SvelteKit
-
-
+# Configuracao completa do Upptime para NovaCRM
 owner: Pedro21062014
 repo: CRM
 
-# Configuração dos seus sites:
+# Sites e endpoints para monitoramento
 sites:
-  - name: NovaCRM
+  # ============================================
+  # SITES PRINCIPAIS
+  # ============================================
+  - name: NovaCRM - Site Principal
     url: https://novacrm.com.br
+    method: GET
+    maxRedirects: 3
+    
+  - name: NovaCRM - App (Dashboard)
+    url: https://novacrm.com.br/app
+    method: GET
+    maxRedirects: 3
+    
   - name: Marketplace
     url: https://marketplace.novacrm.com.br
+    method: GET
+    maxRedirects: 3
+    
+  - name: Marketplace - API
+    url: https://marketplace.novacrm.com.br/api/health
+    method: GET
+    expectedStatus: 200
+    
+  # ============================================
+  # ENDPOINTS DE API (Cloudflare Workers)
+  # ============================================
+  - name: API - WhatsApp Webhook
+    url: https://novacrm.com.br/api/whatsapp/webhook
+    method: POST
+    headers:
+      - "Content-Type: application/json"
+    body: '{"test": true}'
+    expectedStatus: [200, 201, 202, 400, 401, 405]
+    
+  - name: API - Gemini AI
+    url: https://novacrm.com.br/api/gemini
+    method: GET
+    expectedStatus: [200, 401, 403, 404, 405]
+    
+  - name: API - TTS (Text-to-Speech)
+    url: https://novacrm.com.br/api/tts/gemini
+    method: GET
+    expectedStatus: [200, 401, 403, 404, 405]
+    
+  - name: API - Pagamentos (InfinitePay)
+    url: https://novacrm.com.br/api/payments/health
+    method: GET
+    expectedStatus: [200, 404]
+    
+  - name: API - Segurança
+    url: https://novacrm.com.br/api/security/health
+    method: GET
+    expectedStatus: [200, 404]
+    
+  # ============================================
+  # RECURSOS ESTÁTICOS
+  # ============================================
+  - name: Logo (Recurso Estático)
+    url: https://novacrm.com.br/logo.png
+    method: GET
+    expectedStatus: 200
+    
+  - name: Manifest PWA
+    url: https://novacrm.com.br/manifest.json
+    method: GET
+    expectedStatus: 200
+    
+  - name: Favicon
+    url: https://novacrm.com.br/favicon.ico
+    method: GET
+    expectedStatus: 200
 
+# ============================================
+# CONFIGURAÇÃO DO STATUS PAGE
+# ============================================
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   cname: status.novacrm.com.br
-  # baseUrl: /your-repo-name
   logoUrl: https://novacrm.com.br/logo.png
-  name: Novacrm
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: NovaCRM Status
+  introTitle: "**Status NovaCRM** - Monitoramento em tempo real"
+  introMessage: |
+    Esta é a página de status oficial da **NovaCRM**. 
+    Monitoramos todos os nossos serviços 24/7 para garantir a melhor experiência.
+    
+    [**Acessar NovaCRM**](https://novacrm.com.br) | [**Marketplace**](https://marketplace.novacrm.com.br)
+  
   navbar:
     - title: Status
       href: /
+    - title: NovaCRM
+      href: https://novacrm.com.br
+    - title: Marketplace
+      href: https://marketplace.novacrm.com.br
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+  
+  # Cores personalizadas (opcional)
+  # primaryColor: "#6366f1"
+  
+  # Footer personalizado
+  footer: |
+    Feito com ❤️ por NovaCRM • [GitHub](https://github.com/Pedro21062014/CRM)
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# ============================================
+# CONFIGURAÇÕES GERAIS
+# ============================================
+
+# Intervalos de verificação (em minutos)
+# Valores menores = mais verificações mas mais uso de GitHub Actions
+userAgent: "Upptime Bot (https://upptime.js.org)"
+
+# Notificações por Issue do GitHub
+assignees:
+  - Pedro21062014
+
+# Configurações de Issues
+issueLabels:
+  - status:incident
+  - status:investigating
+
+# Commits automáticos
+commitMessages:
+  status: "📊 Update status of $NAME"
+  graphs: "📈 Update graphs"
+  summary: "📝 Update summary"
+
+# Workflow personalizado (opcional)
+# Se quiser schedules diferentes para cada site
+workflows:
+  - name: "Check Main Sites"
+    schedule: "*/5 * * * *"  # A cada 5 minutos
+    sites:
+      - NovaCRM - Site Principal
+      - NovaCRM - App (Dashboard)
+      - Marketplace
+      
+  - name: "Check APIs"
+    schedule: "*/10 * * * *"  # A cada 10 minutos
+    sites:
+      - API - WhatsApp Webhook
+      - API - Gemini AI
+      - API - TTS (Text-to-Speech)
+      - API - Pagamentos (InfinitePay)
+      - API - Segurança
+      
+  - name: "Check Static Resources"
+    schedule: "0 * * * *"  # A cada hora
+    sites:
+      - Logo (Recurso Estático)
+      - Manifest PWA
+      - Favicon
+
+# Configurações de histórico
+history:
+  daysToKeep: 90  # Mantém histórico de 90 dias
+
+# Notificações adicionais (opcional)
+# notifications:
+#   - type: slack
+#     webhook: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+#   - type: discord
+#     webhook: "https://discord.com/api/webhooks/YOUR/WEBHOOK/URL"
+
+# Excluir sites específicos de serem testados em horários específicos
+# exclude:
+#   - name: "API - Pagamentos (InfinitePay)"
+#     schedule: "0 0 * * *"  # Não testa à meia-noite
+
+# Configurações de performance
+performance:
+  audit: true
+  threshold: 0.8  # Alerta se performance cair abaixo de 80%
+
+# ============================================
+# CONFIGURAÇÕES AVANÇADAS
+# ============================================
+
+# Se precisar adicionar headers personalizados para autenticação
+# headers:
+#   - "Authorization: Bearer $TOKEN"
+#   - "X-Custom-Header: value"
+
+# Verificar conteúdo específico na resposta
+# expectedContent: "Bem-vindo"
+
+# Verificar tempo de resposta máximo (em ms)
+# maxResponseTime: 5000
+
+# Se quiser usar secrets do GitHub
+# $SECRETS:
+#   - API_KEY
+#   - WEBHOOK_SECRET
+
+# ============================================
+# METADADOS
+# ============================================
+
+# Informações sobre a empresa/proprietário
+owner:
+  name: "Pedro21062014"
+  url: "https://github.com/Pedro21062014"
+
+# Versão do Upptime
+upptimeVersion: "latest"
+
+# Idioma da página de status
+language: "pt-BR"
+
+# Timezone para exibição
+timezone: "America/Sao_Paulo"
