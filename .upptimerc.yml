@@ -1,32 +1,19 @@
-#.upptimerc.yml
 owner: Pedro21062014
 repo: Crm-status
-
-# Importante para Cloudflare Pages
-i18n:
-  footer: false
-
 sites:
     - name: NovaCRM
     url: https://novacrm.com.br/api/health
     icon: https://novacrm.com.br/favicon.ico
-    # Adicione um header custom para sua regra Skip, mais seguro que user-agent
-    headers:
-            - "X-Uptime-Check: Upptime-123"
-    # O Upptime vai verificar 200
     expectedStatusCodes:
             - 200
+    headers:
+            - 'X-Uptime-Check: Upptime-123'
 
 status-website:
-  # Sua URL custom
   cname: status.novacrm.com.br
   baseUrl: /
-
-  # Desativa coisas que só funcionam no GitHub Pages
   logoUrl: https://novacrm.com.br/logo.png
   name: NovaCRM Status
-  introTitle: "Status da Plataforma NovaCRM"
-  introMessage: "Monitoramento em tempo real"
-
-# Se você usa Cloudflare Pages, garanta que o workflow não tente fazer deploy pro gh-pages
-# O arquivo.nojekyll já é criado sozinho
+  introTitle: Status da Plataforma NovaCRM
+  introMessage: Monitoramento em tempo real
+  branch: main
