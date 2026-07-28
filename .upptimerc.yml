@@ -1,17 +1,18 @@
 owner: Pedro21062014
 repo: Crm-status
+
 sites:
-    - name: NovaCRM
+  - name: NovaCRM
     url: https://novacrm.com.br/api/health
     expectedStatusCodes:
-            - 200
+      - 200
     headers:
-            - "X-Uptime-Check: Upptime-123"
+      - "X-Uptime-Check: Upptime-123"
 
 status-website:
   cname: status.novacrm.com.br
   baseUrl: /
   name: NovaCRM Status
-  introTitle: Status da Plataforma NovaCRM
-  introMessage: Monitoramento em tempo real
+  introTitle: "Status da Plataforma NovaCRM"
+  introMessage: "Monitoramento em tempo real"
   logoUrl: https://novacrm.com.br/logo.png
