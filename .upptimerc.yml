@@ -16,8 +16,10 @@ status-website:
   introTitle: "Status da Plataforma NovaCRM"
   introMessage: "Monitoramento em tempo real"
   logoUrl: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
+  favicon: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
   navbar:
     - title: Status
       href: /
     - title: NovaCRM
       href: https://novacrm.com.br
+  robotsText: "User-agent: * \n Disallow:"
