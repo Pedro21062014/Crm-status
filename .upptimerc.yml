@@ -3,9 +3,11 @@ repo: Crm-status
 
 sites:
   - name: NovaCRM
-    url: https://crm-dy6.pages.dev
+    url: https://novacrm.com.br
     expectedStatusCodes:
       - 200
+    headers:
+      - "User-Agent: Upptime"
 
 status-website:
   cname: status.novacrm.com.br
@@ -14,3 +16,8 @@ status-website:
   introTitle: "Status da Plataforma NovaCRM"
   introMessage: "Monitoramento em tempo real"
   logoUrl: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
+  navbar:
+    - title: Status
+      href: /
+    - title: NovaCRM
+      href: https://novacrm.com.br
