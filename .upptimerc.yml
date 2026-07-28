@@ -1,8 +1,5 @@
 # Adicione esta linha no seu .upptimerc.yml:
 staticSiteGenerator: SvelteKit
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
 
 
 owner: Pedro21062014
