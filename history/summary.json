@@ -1,62 +1,22 @@
 [
   {
     "name": "NovaCRM",
-    "url": "https://novacrm.com.br",
+    "url": "https://novacrm.com.br/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/novacrm.com.br.ico",
     "slug": "nova-crm",
     "status": "down",
-    "uptime": "0.03%",
-    "uptimeDay": "0.03%",
-    "uptimeWeek": "0.03%",
-    "uptimeMonth": "0.03%",
-    "uptimeYear": "0.03%",
-    "time": 40,
-    "timeDay": 40,
-    "timeWeek": 40,
-    "timeMonth": 40,
-    "timeYear": 40,
+    "uptime": "0.02%",
+    "uptimeDay": "0.02%",
+    "uptimeWeek": "0.02%",
+    "uptimeMonth": "0.02%",
+    "uptimeYear": "0.02%",
+    "time": 87,
+    "timeDay": 87,
+    "timeWeek": 87,
+    "timeMonth": 87,
+    "timeYear": 87,
     "dailyMinutesDown": {
-      "2026-07-28": 797
-    }
-  },
-  {
-    "name": "Marketplace",
-    "url": "https://marketplace.novacrm.com.br",
-    "icon": "https://icons.duckduckgo.com/ip3/marketplace.novacrm.com.br.ico",
-    "slug": "marketplace",
-    "status": "down",
-    "uptime": "0.03%",
-    "uptimeDay": "0.03%",
-    "uptimeWeek": "0.03%",
-    "uptimeMonth": "0.03%",
-    "uptimeYear": "0.03%",
-    "time": 40,
-    "timeDay": 40,
-    "timeWeek": 40,
-    "timeMonth": 40,
-    "timeYear": 40,
-    "dailyMinutesDown": {
-      "2026-07-28": 797
-    }
-  },
-  {
-    "name": "API Health",
-    "url": "https://novacrm.com.br/api/health",
-    "icon": "https://icons.duckduckgo.com/ip3/novacrm.com.br.ico",
-    "slug": "api-health",
-    "status": "down",
-    "uptime": "59.77%",
-    "uptimeDay": "59.77%",
-    "uptimeWeek": "59.77%",
-    "uptimeMonth": "59.77%",
-    "uptimeYear": "59.77%",
-    "time": 22,
-    "timeDay": 22,
-    "timeWeek": 22,
-    "timeMonth": 22,
-    "timeYear": 22,
-    "dailyMinutesDown": {
-      "2026-07-28": 0
+      "2026-07-28": 832
     }
   }
 ]
