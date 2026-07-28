@@ -1,64 +1,32 @@
+#.upptimerc.yml
 owner: Pedro21062014
-repo: CRM
+repo: Crm-status
+
+# Importante para Cloudflare Pages
+i18n:
+  footer: false
 
 sites:
-  - name: NovaCRM
-    url: https://novacrm.com.br
-
-  - name: Marketplace
-    url: https://marketplace.novacrm.com.br
-
-  - name: API Health
+    - name: NovaCRM
     url: https://novacrm.com.br/api/health
+    icon: https://novacrm.com.br/favicon.ico
+    # Adicione um header custom para sua regra Skip, mais seguro que user-agent
+    headers:
+            - "X-Uptime-Check: Upptime-123"
+    # O Upptime vai verificar 200
+    expectedStatusCodes:
+            - 200
 
 status-website:
+  # Sua URL custom
   cname: status.novacrm.com.br
-  name: NovaCRM Status
+  baseUrl: /
+
+  # Desativa coisas que só funcionam no GitHub Pages
   logoUrl: https://novacrm.com.br/logo.png
-  favicon: https://novacrm.com.br/favicon.ico
+  name: NovaCRM Status
+  introTitle: "Status da Plataforma NovaCRM"
+  introMessage: "Monitoramento em tempo real"
 
-  introTitle: "Status da NovaCRM"
-  introMessage: >
-    Página oficial de monitoramento da NovaCRM.
-
-  navbar:
-    - title: Status
-      href: /
-    - title: NovaCRM
-      href: https://novacrm.com.br
-    - title: Marketplace
-      href: https://marketplace.novacrm.com.br
-    - title: GitHub
-      href: https://github.com/Pedro21062014/CRM
-
-i18n:
-  activeIncidents: Incidentes ativos
-  allSystemsOperational: Todos os sistemas operacionais
-  incidentReport: Relatório de incidente
-  activeIncidentSummary: Aberto em $DATE com $POSTS postagens
-  incidentTitle: Detalhes do incidente $NUMBER
-  incidentDetails: Detalhes do incidente
-  incidentFixed: Resolvido
-  incidentOngoing: Em andamento
-  incidentOpenedAt: Aberto em
-  incidentClosedAt: Fechado em
-  incidentSubscribe: Inscrever-se nas atualizações
-  incidentViewOnGitHub: Ver no GitHub
-  incidentCommentSummary: Publicado em $DATE por $AUTHOR
-  incidentBack: Voltar para todos os incidentes
-  pastIncidents: Incidentes anteriores
-  pastIncidentsResolved: Resolvido em $MINUTES minutos com $POSTS atualizações
-  liveStatus: Status
-  overallUptime: Uptime geral
-  overallUptimeTitle: Uptime geral
-  averageResponseTime: Tempo médio de resposta
-  averageResponseTimeTitle: Tempo médio de resposta
-  sevelDayResponseTime: Tempo de resposta (7 dias)
-  responseTimeMs: ms
-  up: Online
-  down: Offline
-  degraded: Degradado
-
-commitMessages:
-  commitAuthorName: GitHub Actions
-  commitAuthorEmail: 41898282+github-actions[bot]@users.noreply.github.com
+# Se você usa Cloudflare Pages, garanta que o workflow não tente fazer deploy pro gh-pages
+# O arquivo.nojekyll já é criado sozinho
