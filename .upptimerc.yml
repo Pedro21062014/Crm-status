@@ -2,8 +2,41 @@ owner: Pedro21062014
 repo: Crm-status
 
 sites:
-  - name: NovaCRM
+  - name: NovaCRM - Site Principal
     url: https://novacrm.com.br
+    expectedStatusCodes:
+      - 200
+    headers:
+      - "User-Agent: Upptime"
+
+  - name: NovaCRM - API
+    url: https://novacrm.com.br/api/health
+    expectedStatusCodes:
+      - 200
+    headers:
+      - "User-Agent: Upptime"
+
+  - name: NovaCRM - Login
+    url: https://novacrm.com.br/login
+    expectedStatusCodes:
+      - 200
+    headers:
+      - "User-Agent: Upptime"
+
+  - name: NovaCRM - Dashboard
+    url: https://novacrm.com.br/dashboard
+    expectedStatusCodes:
+      - 200
+    headers:
+      - "User-Agent: Upptime"
+
+  - name: NovaCRM - Página Inicial (Pages)
+    url: https://crm-dy6.pages.dev
+    expectedStatusCodes:
+      - 200
+
+  - name: NovaCRM - CDN/Assets
+    url: https://novacrm.com.br/robots.txt
     expectedStatusCodes:
       - 200
     headers:
@@ -14,7 +47,15 @@ status-website:
   baseUrl: ""
   name: NovaCRM Status
   introTitle: "Status da Plataforma NovaCRM"
-  introMessage: "Monitoramento em tempo real"
+  introMessage: |
+    Monitoramento em tempo real de todos os serviços do NovaCRM.
+    
+    📊 **Serviços monitorados:**
+    - Site Principal
+    - API
+    - Sistema de Login
+    - Dashboard
+    - CDN e Assets
   logoUrl: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
   favicon: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
   navbar:
@@ -22,4 +63,3 @@ status-website:
       href: /
     - title: NovaCRM
       href: https://novacrm.com.br
-  robotsText: "User-agent: * \n Disallow:"
