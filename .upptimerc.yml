@@ -3,7 +3,7 @@ repo: Crm-status
 
 sites:
   - name: NovaCRM
-    url: https://novacrm.com.br
+    url: https://crm-dy6.pages.dev
     expectedStatusCodes:
       - 200
 
@@ -14,8 +14,3 @@ status-website:
   introTitle: "Status da Plataforma NovaCRM"
   introMessage: "Monitoramento em tempo real"
   logoUrl: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/Pedro21062014/Crm-status
