@@ -1,22 +1,22 @@
 [
   {
     "name": "NovaCRM",
-    "url": "https://novacrm.com.br",
-    "icon": "https://icons.duckduckgo.com/ip3/novacrm.com.br.ico",
+    "url": "https://crm-dy6.pages.dev",
+    "icon": "https://icons.duckduckgo.com/ip3/crm-dy6.pages.dev.ico",
     "slug": "nova-crm",
-    "status": "down",
-    "uptime": "0.02%",
-    "uptimeDay": "0.02%",
-    "uptimeWeek": "0.02%",
-    "uptimeMonth": "0.02%",
-    "uptimeYear": "0.02%",
-    "time": 80,
-    "timeDay": 80,
-    "timeWeek": 80,
-    "timeMonth": 80,
-    "timeYear": 80,
+    "status": "up",
+    "uptime": "0.03%",
+    "uptimeDay": "0.03%",
+    "uptimeWeek": "0.03%",
+    "uptimeMonth": "0.03%",
+    "uptimeYear": "0.03%",
+    "time": 120,
+    "timeDay": 120,
+    "timeWeek": 120,
+    "timeMonth": 120,
+    "timeYear": 120,
     "dailyMinutesDown": {
-      "2026-07-28": 841
+      "2026-07-28": 927
     }
   }
 ]
