@@ -3,11 +3,9 @@ repo: Crm-status
 
 sites:
   - name: NovaCRM
-    url: https://novacrm.com.br/api/health
+    url: https://novacrm.com.br
     expectedStatusCodes:
       - 200
-    headers:
-      - "X-Uptime-Check: Upptime-123"
 
 status-website:
   cname: status.novacrm.com.br
@@ -15,4 +13,9 @@ status-website:
   name: NovaCRM Status
   introTitle: "Status da Plataforma NovaCRM"
   introMessage: "Monitoramento em tempo real"
-  logoUrl: https://novacrm.com.br/logo.png
+  logoUrl: https://raw.githubusercontent.com/Pedro21062014/nova-crm-desktop/refs/heads/main/build/icon.png
+  navbar:
+    - title: Status
+      href: /
+    - title: GitHub
+      href: https://github.com/Pedro21062014/Crm-status
