@@ -10,13 +10,13 @@
     "uptimeWeek": "0.03%",
     "uptimeMonth": "0.03%",
     "uptimeYear": "0.03%",
-    "time": 43,
-    "timeDay": 43,
-    "timeWeek": 43,
-    "timeMonth": 43,
-    "timeYear": 43,
+    "time": 40,
+    "timeDay": 40,
+    "timeWeek": 40,
+    "timeMonth": 40,
+    "timeYear": 40,
     "dailyMinutesDown": {
-      "2026-07-28": 791
+      "2026-07-28": 797
     }
   },
   {
@@ -30,33 +30,31 @@
     "uptimeWeek": "0.03%",
     "uptimeMonth": "0.03%",
     "uptimeYear": "0.03%",
-    "time": 39,
-    "timeDay": 39,
-    "timeWeek": 39,
-    "timeMonth": 39,
-    "timeYear": 39,
+    "time": 40,
+    "timeDay": 40,
+    "timeWeek": 40,
+    "timeMonth": 40,
+    "timeYear": 40,
     "dailyMinutesDown": {
-      "2026-07-28": 791
+      "2026-07-28": 796
     }
   },
   {
-    "name": "Logo",
-    "url": "https://novacrm.com.br/logo.png",
+    "name": "API Health",
+    "url": "https://novacrm.com.br/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/novacrm.com.br.ico",
-    "slug": "logo",
+    "slug": "api-health",
     "status": "down",
-    "uptime": "64.85%",
-    "uptimeDay": "64.85%",
-    "uptimeWeek": "64.85%",
-    "uptimeMonth": "64.85%",
-    "uptimeYear": "64.85%",
-    "time": 47,
-    "timeDay": 47,
-    "timeWeek": 47,
-    "timeMonth": 47,
-    "timeYear": 47,
-    "dailyMinutesDown": {
-      "2026-07-28": 0
-    }
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 22,
+    "timeDay": 22,
+    "timeWeek": 22,
+    "timeMonth": 22,
+    "timeYear": 22,
+    "dailyMinutesDown": {}
   }
 ]
